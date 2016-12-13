@@ -1,0 +1,27 @@
+{
+  "name": "reactredux",
+  "version": "1.0.0",
+  "description": "React Redux App",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmarr768/reactredux.git"
+  },
+  "author": "Colin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cmarr768/reactredux/issues"
+  },
+  "homepage": "https://github.com/cmarr768/reactredux#readme",
+  "dependencies": {
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0",
+    "react-redux": "^4.4.6",
+    "redux": "^3.6.0",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
