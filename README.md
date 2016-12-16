@@ -8,3 +8,6 @@ follow reactshell installs
 
 I pulled this together from my react redux app and used the concepts
 from the redux tutorial found http://redux.js.org/docs/basics/ExampleTodoList.html and from this https://github.com/happypoulp/redux-tutorial.
+
+I changed the folder structure to describe what types of files will be found in them.
+Using materialize.css.

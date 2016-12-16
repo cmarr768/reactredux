@@ -4,21 +4,20 @@ let author;
 let text;
 const CommentForm = ({onClick}) =>
     (
-        <div className="col-md-4 col-lg-4 col-sm-6">
-            <div className="panel panel-default">
-                <div className="panel-body">
-                    <div className="form-group">
-                        <input className="form-control" placeholder="name" ref={node => {
-                            author = node
-                        } } />
-                        <input className="form-control" placeholder="comment" ref={node => {
-                            text = node
-                        } } />
-                        <input type="button" value="Post" className="btn btn-success" onClick={e => {
-                            e.preventDefault()
-                            onClick(author.value, text.value);
-                        } } />
-                    </div>
+        <div className="col m4 l4 s6">
+            <div className="card-panel teal">
+                <div className="input-field">
+                    <input placeholder="name" ref={node => {
+                        author = node
+                    } } />
+                    <input placeholder="comment" ref={node => {
+                        text = node
+                    } } />
+                    <input type="button" value="Post" className="btn waves-effect waves-light" onClick={e => {
+                        e.preventDefault()
+                        onClick(author.value, text.value);
+                    } } >
+                    </input>
                 </div>
             </div>
         </div>

@@ -3,15 +3,13 @@ import Comment from './Comment';
 
 //An unordered list of comments.
 const CommentList = ({ Comments }) => (
-    <div className="col-md-4 col-lg-4 col-sm-6">
-        <ul className="list-group">
+    <div className="col m4 l4 s6">
             {Comments.map(comment =>
                 <Comment
                     key={comment.id}
                     {...comment}
                     />
             )}
-        </ul>
     </div>
 );
 
