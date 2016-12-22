@@ -1,8 +1,7 @@
-const Comment = (state = {}, action) => {
+const Post = (state = {}, action) => {
     switch (action.type) {
-        case 'ADD_COMMENT':
+        case 'ADD_POST':
             return {
-                postId: action.postId,
                 id: action.id,
                 author: action.author,
                 text: action.text
@@ -13,4 +12,4 @@ const Comment = (state = {}, action) => {
     }
 };
 
-export default Comment;
+export default Post;

@@ -1,15 +1,16 @@
 import React from 'react';
 import CommentFormContainer from '../containers/CommentFormContainer';
-import CommentListContainer from '../containers/CommentListContainer';
+import PostFormContainer from '../containers/PostFormContainer';
+import PostsContainer from '../containers/PostsContainer';
 
 //The entry point of react code.
 const App = () => (
     <div>
         <div className="clearfix">
-            <CommentFormContainer />
+            <PostFormContainer />
         </div>
         <div className="clearfix">
-            <CommentListContainer />
+            <PostsContainer />
         </div>
     </div>
 )

@@ -1,27 +1,29 @@
 import React, { PropTypes } from 'react';
 
-let author;
-let text;
-const CommentForm = ({onClick}) =>
-    (
-        <div className="col m4 l4 s6">
-            <div className="card-panel teal">
-                <div className="input-field">
-                    <input placeholder="name" ref={node => {
-                        author = node
-                    } } />
-                    <input placeholder="comment" ref={node => {
-                        text = node
-                    } } />
-                    <input type="button" value="Post" className="btn waves-effect waves-light" onClick={e => {
+const CommentForm = ({onClick, postId}) => {
+    let author;
+    let text;
+    return (
+        <div className="card-panel blue lighten-5" style={{marginLeft: 20 + 'px'}}>
+            <div className="card-content black-text">Add a new comment</div>
+            <div className="input-field">
+                <input placeholder="name" ref={node => {
+                    author = node
+                } } />
+                <input placeholder="comment" ref={node => {
+                    text = node
+                } } />
+                <div className="right-align">
+                    <input type="button" value="Submit Comment" className="btn waves-effect waves-light" onClick={e => {
                         e.preventDefault()
-                        onClick(author.value, text.value);
+                        onClick(postId, author.value, text.value);
                     } } >
                     </input>
                 </div>
             </div>
         </div>
     );
+};
 
 CommentForm.propTypes = {
     onClick: PropTypes.func.isRequired
