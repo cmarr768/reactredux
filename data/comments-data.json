@@ -1,0 +1,28 @@
+{
+    "comments": [
+        {
+            "id": -10,
+            "postId": -2,
+            "author": "John",
+            "text": "Comment read from data"
+        },
+        {
+            "id": -9,
+            "postId": -2,
+            "author": "Matthew",
+            "text": "2nd Comment read from data"
+        },
+        {
+            "id": -8,
+            "postId": -2,
+            "author": "Mark",
+            "text": "STill reading data"
+        },
+        {
+            "id": -7,
+            "postId": -1,
+            "author": "Luke",
+            "text": "Reading comment on my own post"
+        }
+    ]
+}

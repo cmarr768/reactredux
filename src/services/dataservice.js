@@ -39,6 +39,23 @@ const dataService = store => next => action => {
 				})
 			})
 		break
+	case 'GET_COMMENTS_DATA':
+		request
+			.get('data/comments-data.json')
+			.end((err, res) => {
+				if (err) {
+					return next({
+						type: 'GET_COMMENTS_DATA_ERROR',
+						err
+					})
+				}
+				const data = JSON.parse(res.text).comments;
+				next({
+					type: 'GET_COMMENTS_DATA_RECEIVED',
+					data
+				})
+			})
+		break
 	default:
 		break
 	}

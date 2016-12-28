@@ -7,6 +7,8 @@ const Comments = (state = [], action) => {
                 ...state,
                 Comment(undefined, action)
             ]
+        case 'GET_COMMENTS_DATA_RECEIVED':
+            return action.data
         default:
             return state
     }

@@ -12,6 +12,7 @@ let store = createStore(CommentApp, {}, compose(applyMiddleware(dataService)));
 console.log('store state after initialization:', store.getState());
 store.dispatch({type: 'GET_USER_DATA'});
 store.dispatch({type: 'GET_POSTS_DATA'});
+store.dispatch({type: 'GET_COMMENTS_DATA'});
 
 //Render our application which will display our comment list.
 render(
