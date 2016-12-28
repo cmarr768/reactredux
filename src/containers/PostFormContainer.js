@@ -3,6 +3,12 @@ import { connect } from 'react-redux';
 import PostForm from '../components/PostForm';
 import AddPost from '../actions/AddPost';
 
+const mapStateToProps = (state) => {
+    return {
+        SelectPostUser: state.SelectPostUser
+    }
+};
+
 const mapDispatchToProps = (dispatch) => {
     return{
         onClick:( author, text)=>{
@@ -16,7 +22,7 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 const PostFormContainer = connect(
-    null,//This represents mapStateToProps which we are not using here.
+    mapStateToProps,//This represents mapStateToProps which we are not using here.
     mapDispatchToProps
 )(PostForm);
 

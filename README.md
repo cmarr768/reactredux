@@ -11,3 +11,8 @@ from the redux tutorial found http://redux.js.org/docs/basics/ExampleTodoList.ht
 
 I changed the folder structure to describe what types of files will be found in them.
 Using materialize.css.
+
+Adding superagent
+
+    npm install superagent
+

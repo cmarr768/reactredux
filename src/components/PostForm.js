@@ -1,23 +1,21 @@
 import React, { PropTypes } from 'react';
+import UserSelectContainer from '../containers/UserSelectContainer';
 
-let author;
 let text;
-const PostForm = ({onClick}) =>
+const PostForm = ({SelectPostUser, onClick}) =>
     (
         <div className="col m4 l4 s6">
             <div className="card-panel red darken-1 z-depth-4">
             <div className="card-content white-text">Add a new post</div>
                 <div className="input-field">
-                    <input placeholder="name" ref={node => {
-                        author = node
-                    } } />
+                    <UserSelectContainer />
                     <input placeholder="post" ref={node => {
                         text = node
                     } } />
                     <div className="right-align">
                         <input type="button" value="Submit Post" className="btn waves-effect waves-light" onClick={e => {
                             e.preventDefault()
-                            onClick(author.value, text.value);
+                            onClick(SelectPostUser.name, text.value);
                         } } >
                         </input>
                     </div>
