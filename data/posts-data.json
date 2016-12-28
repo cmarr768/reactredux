@@ -1,0 +1,14 @@
+{
+    "posts": [
+        {
+            "id": -2,
+            "author": "Mark",
+            "text": "Post read from data"
+        },
+        {
+            "id": -1,
+            "author": "Luke",
+            "text": "2nd Post read from data"
+        }
+    ]
+}

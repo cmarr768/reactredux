@@ -22,6 +22,23 @@ const dataService = store => next => action => {
 				})
 			})
 		break
+	case 'GET_POSTS_DATA':
+		request
+			.get('data/posts-data.json')
+			.end((err, res) => {
+				if (err) {
+					return next({
+						type: 'GET_POSTS_DATA_ERROR',
+						err
+					})
+				}
+				const data = JSON.parse(res.text).posts;
+				next({
+					type: 'GET_POSTS_DATA_RECEIVED',
+					data
+				})
+			})
+		break
 	default:
 		break
 	}

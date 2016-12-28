@@ -7,6 +7,8 @@ const Posts = (state = [], action) => {
                 ...state,
                 Post(undefined, action)
             ]
+        case 'GET_POSTS_DATA_RECEIVED':
+            return action.data
         default:
             return state
     }
