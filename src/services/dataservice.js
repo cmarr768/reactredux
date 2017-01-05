@@ -56,6 +56,24 @@ const dataService = store => next => action => {
 				})
 			})
 		break
+	case 'GET_POSTS_FROM_API':
+		request
+			.get('http://localhost:5000/api/post')
+			.end((err, res) => {
+				if (err) {
+					return next({
+						type: 'GET_POSTS_FROM_API_ERROR',
+						err
+					})
+				}
+				debugger;
+				const data = JSON.parse(res.text);
+				next({
+					type: 'GET_POSTS_FROM_API_RECEIVED',
+					data
+				})
+			})
+		break
 	default:
 		break
 	}
