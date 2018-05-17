@@ -1,5 +1,6 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import UserSelectContainer from '../containers/UserSelectContainer';
+import PropTypes from 'prop-types';
 
 let text;
 const PostForm = ({SelectPostUser, onClick}) =>

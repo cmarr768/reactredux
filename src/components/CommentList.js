@@ -1,5 +1,6 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import Comment from './Comment';
+import PropTypes from 'prop-types';
 
 //An unordered list of comments.
 const CommentList = ({ Comments }) => (

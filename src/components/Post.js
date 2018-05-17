@@ -1,6 +1,7 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import CommentList from './CommentList';
 import CommentFormContainer from '../containers/CommentFormContainer';
+import PropTypes from 'prop-types';
 
 //A post will have the author, text, and comments.
 const Post = ({ id, author, text, Comments }) => {

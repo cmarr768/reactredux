@@ -1,29 +1,30 @@
-var config = {
-   entry: './main.js',
-	
-   output: {
-      path:'./',
-      filename: 'index.js',
-   },
-	
-   devServer: {
-      inline: true,
-      port: 8080
-   },
-	
-   module: {
-      loaders: [
-         {
-            test: /\.jsx?$/,
-            exclude: /node_modules/,
-            loader: 'babel',
-				
-            query: {
-               presets: ['es2015', 'react']
-            }
-         }
-      ]
-   }
-}
+const path = require('path');
+const webpack = require('webpack');
 
-module.exports = config;
+module.exports = {
+    entry: './main.js',
+
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'index.js'
+    },
+
+    devServer: {
+        contentBase: './',
+        hot: true
+    },
+
+    module: {
+        rules: [
+            {
+                test: /\.jsx?$/,
+                exclude: /node_modules/,
+                loader: 'babel-loader',
+
+                query: {
+                    presets: ['react', 'env']
+                }
+            }
+        ]
+    }
+}

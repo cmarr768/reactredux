@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 //List item objects displaying the author and text entered of the comment.
 const Comment = ({ author, text }) => (
