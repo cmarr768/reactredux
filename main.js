@@ -5,7 +5,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import CommentApp from './src/reducers';
 import App from './src/components/App';
 import AddComment from './src/actions/AddComment';
-import dataService from './src/services/dataService';
+import dataService from './src/services/dataservice';
 
 //Create store and initialize
 let store = createStore(CommentApp, {}, compose(applyMiddleware(dataService)));
