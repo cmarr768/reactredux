@@ -16,3 +16,6 @@ Adding superagent
 
     npm install superagent
 
+This has been updated to run in a docker container.
+    docker build -t reactredux .
+    docker run -p 4000:8080 reactredux
